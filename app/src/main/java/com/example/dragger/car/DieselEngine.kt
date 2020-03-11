@@ -10,7 +10,7 @@ class DieselEngine @Inject constructor():Engine{
     }
 
     override fun start() {
-        Log.e(TAG,"Petrol Engine Started")
+        Log.e(TAG,"Diesel Engine Started")
 
     }
 }
