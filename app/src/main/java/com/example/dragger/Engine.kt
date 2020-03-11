@@ -1,6 +1,7 @@
 package com.example.dragger
 
-import javax.inject.Inject
+import android.util.Log
 
-class Engine @Inject constructor() {
+interface Engine {
+   fun start()
 }

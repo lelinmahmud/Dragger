@@ -16,6 +16,7 @@ class Car @Inject constructor(private val engine: Engine,private val wheels: Whe
     }
 
     fun drive(){
+        engine.start()
         Log.e(TAG,"Driving...........")
     }
 }
