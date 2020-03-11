@@ -8,6 +8,13 @@ class Car @Inject constructor(private val engine: Engine,private val wheels: Whe
         private final val TAG="Car"
     }
 
+
+
+    @Inject
+    fun enableRemote(remote: Remote){
+        remote.setListener(this)
+    }
+
     fun drive(){
         Log.e(TAG,"Driving...........")
     }
