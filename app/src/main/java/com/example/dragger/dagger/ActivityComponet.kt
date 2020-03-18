@@ -12,7 +12,7 @@ interface ActivityComponet {
 
     fun getCar(): Car
     fun inject(mainActivity: MainActivity)
-    @Subcomponent.Builder
+/*    @Subcomponent.Builder
     interface Builder{
         fun build(): ActivityComponet
     @BindsInstance
@@ -21,9 +21,9 @@ interface ActivityComponet {
     @BindsInstance
     fun engineCapacity(@Named("engine capacity")engineCapacity:Int):Builder
 
-}
+}*/
     @Subcomponent.Factory
     interface Factory{
-
+        fun create( @BindsInstance @Named("horse power")horsePower:Int, @BindsInstance @Named("engine capacity")engineCapacity:Int):ActivityComponet
     }
 }

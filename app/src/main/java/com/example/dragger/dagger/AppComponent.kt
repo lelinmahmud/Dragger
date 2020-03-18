@@ -1,13 +1,17 @@
 package com.example.dragger.dagger
 
-import com.example.dragger.DieselEngileModule
-import com.example.dragger.car.Driver
 import dagger.Component
+import dagger.Subcomponent
 import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [DriverModule::class])
 interface AppComponent {
 
-    fun getActivityComponentBuilder():ActivityComponet.Builder
+    fun getActivityComponentFactory():ActivityComponet.Factory
+
+    @Component.Factory
+    interface Factory{
+        fun create(driverModule:DriverModule):AppComponent
+    }
 }

@@ -1,7 +1,7 @@
-package com.example.dragger
+package com.example.dragger.dagger
 
+import com.example.dragger.Engine
 import com.example.dragger.car.DieselEngine
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
@@ -9,7 +9,7 @@ import dagger.Provides
  class DieselEngileModule(val horsePower:Int) {
 
     @Provides
-     fun provideEngine(engine:DieselEngine):Engine{
+     fun provideEngine(engine:DieselEngine): Engine {
         return engine
     }
 
