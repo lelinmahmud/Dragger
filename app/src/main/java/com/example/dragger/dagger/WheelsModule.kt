@@ -1,5 +1,8 @@
-package com.example.dragger
+package com.example.dragger.dagger
 
+import com.example.dragger.Rims
+import com.example.dragger.Tires
+import com.example.dragger.Wheels
 import dagger.Module
 import dagger.Provides
 
@@ -7,19 +10,19 @@ import dagger.Provides
 class WheelsModule {
 
     @Provides
-    fun provideRims():Rims{
+    fun provideRims(): Rims {
         return Rims()
     }
 
     @Provides
-    fun provideTires():Tires{
-        val tires=Tires()
+    fun provideTires(): Tires {
+        val tires= Tires()
         tires.inflate()
         return tires
     }
 
     @Provides
-    fun provideWheels(rims: Rims,tires: Tires):Wheels{
+    fun provideWheels(rims: Rims, tires: Tires): Wheels {
         return Wheels(rims,tires)
     }
 }

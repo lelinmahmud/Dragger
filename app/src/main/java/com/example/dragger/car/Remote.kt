@@ -1,6 +1,7 @@
 package com.example.dragger
 
 import android.util.Log
+import com.example.dragger.car.Car
 import javax.inject.Inject
 
 class Remote @Inject constructor() {
