@@ -19,6 +19,7 @@ interface CarComponent {
         fun build(): CarComponent
         @BindsInstance
         fun horsePower(@Named("horse power")horsePower:Int): Builder
+
         @BindsInstance
         fun engineCapacity(@Named("engine capacity")engineCapacity:Int):Builder
 
