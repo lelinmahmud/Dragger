@@ -1,12 +1,20 @@
 package com.example.dragger
 
+import com.example.dragger.car.DieselEngine
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
 @Module
-abstract class DieselEngileModule {
+ class DieselEngileModule(val horsePower:Int) {
 
-    @Binds
-    abstract fun provideEngine(engine: DieselEngine):Engine
+    @Provides
+     fun provideEngine(engine:DieselEngine):Engine{
+        return engine
+    }
+
+    @Provides
+    fun prividesHorsePower():Int{
+        return horsePower
+    }
 }

@@ -1,12 +1,13 @@
-package com.example.dragger
+package com.example.dragger.dagger
 
+import com.example.dragger.Engine
+import com.example.dragger.PetrolEngine
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
 
 @Module
 abstract class PetrolEngileModule {
 
     @Binds
-    abstract fun provideEngine(petrolEngine: PetrolEngine):Engine
+    abstract fun provideEngine(petrolEngine: PetrolEngine): Engine
 }
